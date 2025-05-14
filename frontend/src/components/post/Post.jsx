@@ -37,8 +37,8 @@ export default function Post({post}) {
     }
 
   return (
-    <div className="w-full shadow-[2px_6px_8px_-5px_#5977a6] rounded-[10px] my-5 post">
-        <div className="p-2.5 postWrapper">
+    <div class="w-full shadow-black rounded-[10px] my-5">
+        <div class="p-2.5">
             <div className="postTop">
                 <div className="postTopLeft">
                     <Link to={`/profile/${user.username}`}>
