@@ -37,15 +37,18 @@ export default function Post({post}) {
     }
 
   return (
-    <div className='post'>
-        <div className="postWrapper">
+    <div className="w-full shadow-[2px_6px_8px_-5px_#5977a6] rounded-[10px] my-5 post">
+        <div className="p-2.5 postWrapper">
             <div className="postTop">
                 <div className="postTopLeft">
                     <Link to={`/profile/${user.username}`}>
                          <img 
                             src={
-                                user.profilePicture ?
-                                PUBLIC_FOLDER + user.profilePicture : PUBLIC_FOLDER + "/person/noAvatar.png"} 
+                                user.profilePicture 
+                                    ? PUBLIC_FOLDER + user.profilePicture 
+                                    : PUBLIC_FOLDER + "/person/noAvatar.png"
+                            }
+                            alt="" 
                              className="postProfileImg"/>
                     </Link>
                 <span className="postUsername">{user.username}</span>
@@ -57,7 +60,9 @@ export default function Post({post}) {
             </div>
                 <div className="postCenter">
                     <span className="postText">{post.desc}</span>
-                    <img src={PUBLIC_FOLDER + post.img} alt="" className='postImg' />
+                    {post.img && (<img src={PUBLIC_FOLDER + post.img} alt="" className='postImg' />
+)}
+
                 </div>
                 <div className="postBottom">
                     <div className="postBottomLeft">

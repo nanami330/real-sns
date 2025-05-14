@@ -11,7 +11,6 @@ export default function Share() {
   const desc = useRef();
 
   const [file, setFile] =useState(null);
-  console.log(file);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +26,7 @@ export default function Share() {
       data.append("name", fileName);
       data.append("file", file);
       newPost.img = fileName;
+       console.log(newPost);
       try {
         //画像APIをたたく
         await axios.post("/upload", data);
@@ -52,7 +52,7 @@ export default function Share() {
                                 user.profilePicture 
                                 ? PUBLIC_FOLDER + user.profilePicture 
                                 : PUBLIC_FOLDER + "/person/noAvatar.png"} 
-                             className="postProfileImg"/>
+                             className="shareProfileImg"/>
                 <input type="text" 
                        className='shareInput'
                        placeholder='今なにしてるの？'
