@@ -9,64 +9,64 @@
     z-index: 100;    
 } */
 
- .topbarLeft {
-    flex: 3; /*幅を3/12に指定できる*/
-}
-
+ /* .topbarLeft {
+    flex: 3; 
+} */
+/* 
 .logo {
     font-size: 24px;
     color: white;
     font-weight: bold;
     margin-left: 20px;
-}
+} */
 
-.searchbar{
+/* .searchbar{
     width: 100%;
     height: 30px;
     background-color: white;
     border-radius: 25px;
-    display: flex; /*divタグで囲まれた範囲が横並びになる*/
+    display: flex; 
     align-items: center;
-}
+} */
 
-.searchIcon {
+/* .searchIcon {
     font-size: 20px !important;
     margin-left: 10px;
     margin-right: 5px;
-}
+} */
 
-.searchInput {
+/* .searchInput {
     border: none;
     width: 80%;
-}
-
+} */
+/* 
 .searchInput:focus {
     outline: none;
 }
 
 .topbarCenter {
-    flex: 5; /*幅を3/12に指定できる*/
-}
+    flex: 5; 
+} */
 
-.topbarRight {
-    flex: 4; /*幅を3/12に指定できる*/
+/* .topbarRight {
+    flex: 4; 
     display: flex;
     align-items: center;
     justify-content: space-around;
     color: white;
-}
+} */
 
-.topbarItemIcons{
+/* .topbarItemIcons{
     display: flex;
-}
+} */
 
-.topbarIconItem {
+/* .topbarIconItem {
     margin-right: 15px;
     cursor: pointer;
     position: relative;
     margin-top: 5px;
-}
-
+} */
+/* 
 .topbarImg {
     width: 32px;
     height: 32px;
@@ -76,7 +76,7 @@
 }
 
 .topbarIconBadge {
-    position: absolute; /*relativeを親にした絶対位置を指定できる*/
+    position: absolute; 
     top: -5px;
     right: -5px;
     background-color: #db6ab9;
@@ -87,4 +87,4 @@
     align-items: center;
     justify-content: center;
     font-size: 12px;
-} 
+}  */

@@ -1,10 +1,10 @@
-.sidebar {
+/* .sidebar {
     flex: 2.5;
     height: 100vh;
 }
 
 .sidebarWrapper {
-    padding: 20px; /*内側の余白*/
+    padding: 20px; 
 }
 
 .sidebarList {
@@ -61,4 +61,4 @@
     object-fit: cover;
     border-radius: 50%;
     margin-right: 10px;
-}
+} */

@@ -9,10 +9,14 @@ export default function Home() {
   return (
     <>
         <Topbar />
-        <div className="homeContainer">
+        <div className="flex w-full bg-slate-50">
          <Sidebar />
+          <div className="flex-[8]">
          <TimeLine />
-         <Rightbar /> 
+          </div>
+          <div className='flex-[4]'>
+             <Rightbar />
+          </div>
         </div>
     </>
   );

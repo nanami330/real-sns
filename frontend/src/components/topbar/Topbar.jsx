@@ -35,7 +35,7 @@ export default function Topbar() {
                 <span className="absolute -top-1 -right-1 bg-purple-500 w-4 h-4 rounded-full flex items-center justify-center text-sm">2</span>
             </div>
             <Link to={`/profile/${user.username}`}>
-            <img src={user.profilePicture ? PUBLIC_FOLDER + user.profilePicture :PUBLIC_FOLDER + "/person/noAvatar.png"} alt="" className='topbarImg' />
+            <img src={user.profilePicture ? PUBLIC_FOLDER + user.profilePicture :PUBLIC_FOLDER + "/person/noAvatar.png"} alt="" className='w-[32px] h-[32px] rounded-full mt-2' />
             </Link>
             </div>
         </div>

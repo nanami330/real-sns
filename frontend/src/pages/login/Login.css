@@ -1,4 +1,4 @@
-.login {
+/* .login {
     width: 100vw;
     height: 100vh;
     background-color: #e5eefa;
@@ -10,7 +10,6 @@
 .loginWrapper {
     width: 70%;
     height: 70%;
-    /* background-color: green; */
     display: flex;
 }
 
@@ -90,4 +89,4 @@
 .loginMsg {
     text-align: center;
     font-weight: 550;
-}
+} */

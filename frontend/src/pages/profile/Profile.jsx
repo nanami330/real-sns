@@ -53,8 +53,12 @@ export default function Profile() {
 
           {/* タイムライン + 右バー */}
           <div className="flex mt-6">
-            <TimeLine username={username} />
-            <Rightbar user={user} />
+            <div className="flex-[8]">
+              <TimeLine username={username} />
+            </div>
+            <div className='flex-[4]'>
+               <Rightbar user={user} />
+              </div>           
           </div>
         </div>
       </div>
