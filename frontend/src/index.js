@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { AuthContextProvider } from './state/AuthContext';
+// index.js (またはApp.js)
+import './index.css'; // index.cssファイルをインポート
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

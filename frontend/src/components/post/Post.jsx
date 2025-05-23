@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./Post.css";
 import { MoreVert } from '@mui/icons-material';
-// import {Users} from "../../dummyData";
 import axios from "axios";
 import {format} from "timeago.js"
 import { Link } from 'react-router-dom';
@@ -27,7 +26,6 @@ export default function Post({post}) {
 
     const handleLike = async() => {
         try {
-            //いいねのAPIをたたいていく
             await axios.put(`/post/${post._id}/like`,{userId: currentUser._id});
         } catch (err) {
             console.log(err);
@@ -37,11 +35,11 @@ export default function Post({post}) {
     }
 
   return (
-    <div class="w-full shadow-black rounded-[10px] my-5">
-        <div class="p-2.5">
-            <div className="postTop">
-                <div className="postTopLeft">
-                    <Link to={`/profile/${user.username}`}>
+    <div className=" my-4 shadow-xl rounded-lg overflow-hidden bg-white">
+        <div className="p-4">
+            <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                    <Link to={`/profile/${user.username}`} className="flex items-center">
                          <img 
                             src={
                                 user.profilePicture 
@@ -49,32 +47,33 @@ export default function Post({post}) {
                                     : PUBLIC_FOLDER + "/person/noAvatar.png"
                             }
                             alt="" 
-                             className="postProfileImg"/>
+                            className="w-12 h-12 rounded-full object-cover border border-gray-300"/>
                     </Link>
-                <span className="postUsername">{user.username}</span>
-                <span className="postDate">{format(post.createdAt)}</span>
+                <div className="ml-4">
+                    <span className="font-bold text-lg text-gray-800">{user.username}</span>
+                    <span className="ml-4 text-sm text-gray-500">{format(post.createdAt)}</span>
+                </div>
             </div>
                 <div className="postTopRight">
-                    <MoreVert />
+                    <MoreVert className="text-gray-600 cursor-pointer"/>
                 </div>
             </div>
-                <div className="postCenter">
-                    <span className="postText">{post.desc}</span>
-                    {post.img && (<img src={PUBLIC_FOLDER + post.img} alt="" className='postImg' />
-)}
+                <div className="postCenter mt-4">
+                    <span className="postText block text-gray-700 text-base mb-2">{post.desc}</span>
+                    {post.img && (<img src={PUBLIC_FOLDER + post.img} alt="" className='postImg w-full rounded-lg object-cover' />)}
 
                 </div>
-                <div className="postBottom">
-                    <div className="postBottomLeft">
-                        <img src={PUBLIC_FOLDER + "/heart.png"} alt="" className='likeIcon' onClick={() => handleLike()}/>
-                        <span className="postLikeCounter">{like}人がいいねを押しました</span>
+                <div className="postBottom mt-4 flex items-center justify-between">
+                    <div className="postBottomLeft flex items-center">
+                        <img src={PUBLIC_FOLDER + "/heart.png"} alt="" className='likeIcon w-6 h-6 cursor-pointer' onClick={() => handleLike()}/>
+                        <span className="postLikeCounter ml-2 text-gray-600">{like}人がいいねを押しました</span>
                     </div>
 
                     <div className="postBottomRight">
-                        <span className="postCommentText">{post.comment}:コメント</span>
+                        <span className="postCommentText text-gray-600 cursor-pointer">{post.comment}:コメント</span>
                     </div>
                 </div>
             </div>
         </div>
-  )
+  );
 }

@@ -45,27 +45,27 @@ export default function Share() {
   };
 
   return (
-    <div className='share'>
-        <div className="shareWrapper">
-            <div className="shareTop">
+    <div className='w-full h-170px shadow-xl rounded-lg'>
+        <div className="p-10">
+            <div className="flex items-center">
             <img   src={
                                 user.profilePicture 
                                 ? PUBLIC_FOLDER + user.profilePicture 
                                 : PUBLIC_FOLDER + "/person/noAvatar.png"} 
-                             className="shareProfileImg"/>
+                             className="w-10 h-10 rounded-full object-cover mr-10"/>
                 <input type="text" 
-                       className='shareInput'
+                       className='border-none w-full outline-none'
                        placeholder='今なにしてるの？'
                        ref ={desc}
                        />
         </div>
-        <hr className="shareHr" />
+        <hr className="m-2" />
 
-        <form className="shareButtons" onSubmit={(e) => handleSubmit(e)}>
-          <div className='shareOptions'>
-            <label className='shareOption' htmlFor="file">
-            <Image className='shareIcon' htmlColor='blue'/>
-            <span className="shareOptionText">写真</span>
+        <form className="flex items-center justify-between" onSubmit={(e) => handleSubmit(e)}>
+          <div className='flex ml-2'>
+            <label className='flex items-center mr-4 cursor-pointer' htmlFor="file">
+            <Image className='mr-1' htmlColor='blue'/>
+            <span className="text-xs font-medium">写真</span>
             <input 
               type="file" 
               id="file" 
@@ -75,22 +75,22 @@ export default function Share() {
             />
           </label>
 
-          <div className='shareOption'>
-            <Gif className='shareIcon' htmlColor='hotpink'/>
-            <span className="shareOptionText">GIF</span>
+          <div className='flex items-center mr-4 cursor-pointer'>
+            <Gif className='mr-1' htmlColor='hotpink'/>
+            <span className="text-xs font-medium">GIF</span>
           </div>
 
-          <div className='shareOption'>
-            <Face className='shareIcon' htmlColor='green'/>
-            <span className="shareOptionText">気持ち</span>
+          <div className='flex items-center mr-4 cursor-pointer'>
+            <Face className='mr-1' htmlColor='green'/>
+            <span className="text-xs font-medium">気持ち</span>
           </div>
 
-          <div className='shareOption'>
-            <Analytics className='shareIcon' htmlColor='red'/>
-            <span className="shareOptionText">投票</span>
+          <div className='flex items-center mr-4 cursor-pointer'>
+            <Analytics className='mr-1' htmlColor='red'/>
+            <span className="text-xs font-medium">投票</span>
           </div>
         </div>
-        <button className="shareButton" type="submit">投稿</button>
+        <button className="w-20 border-none p-px bg-blue-500 rounded-md text-stone-50 cursor-pointer mr-5" type="submit">投稿</button>
        </form>
        </div>
     </div>

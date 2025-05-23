@@ -20,13 +20,13 @@ export default function TimeLine({username}) {
       return new Date(post2.createdAt) - new Date(post1.createdAt);
         })
       );
-    };
+    }
     fetchPosts();
   }, [username]);
 
   return (
-    <div className='timeline'>
-      <div className="timelineWrepper">
+    <div className='flex-6'>
+      <div className="p-20px">
         <Share />
          {posts.map((post) => (
         <Post post ={post} key={post._id} />
