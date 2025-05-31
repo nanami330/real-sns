@@ -1,29 +1,26 @@
-# README
-Getting Started with Create React App
-This project was initialized using Create React App.
+## 環境構築方法
+### インストール
+1.リポジトリをクローン
+- `git clone`
 
-## Available Scripts
-In the project directory, you can run the following commands:
+2.必要なパッケージをインストール
+- `npm install`
 
-### ``` npm start ```
-Starts the app in development mode.
-Open http://localhost:3000 in your browser to view it.
+### ローカル環境の立ち上げ
+1.バックエンドの起動
+- `cd real-sns/backend`
+- `npm start`
 
-The page will automatically reload when you make changes.
-You may also see linting errors in the console.
+2.フロントエンドの起動
+- `cd real-sns/frontend`
+- `npm start`
 
-### ``` npm run build ```
-Builds the app for production and outputs the result to the build folder.
-It bundles React in production mode and optimizes the build for best performance.
+下記のローカル環境にアクセスできれば　OK <br>
+localhost:3000 <br>
 
-The output is minified, and filenames include content hashes.
-Your app is now ready to be deployed.
+## 技術スタック
+データベース: MongoDB
 
-See the "Deployment" section for more information.
+バックエンド: Express, Node.js
 
-## Technology stack 
-Database: MongoDB
-
-Backend: Express, Node.js
-
-Frontend: React
+フロントエンド: React
