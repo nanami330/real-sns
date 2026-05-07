@@ -1,0 +1,5 @@
+terraform.tfvars
+nanami-aws.pem
+.terraform/
+*.tfstate
+*.tfstate.*
